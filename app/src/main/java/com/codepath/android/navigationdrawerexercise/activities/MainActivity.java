@@ -11,6 +11,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.codepath.android.navigationdrawerexercise.R;
 import com.codepath.android.navigationdrawerexercise.fragments.FamilyGuyFragment;
@@ -31,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nvView);
+// Inflate the header view at runtime
+//        View headerLayout = navigationView.inflateHeaderView(R.layout.nav_header);
+// We can now look up items within the header if needed
+//        ImageView ivHeaderPhoto = (ImageView) headerLayout.findViewById(R.id.ivHeader);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
